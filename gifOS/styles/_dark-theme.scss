@@ -1,0 +1,138 @@
+.dark-theme {
+  background-color: $dark-body-background-color;
+
+  .bar-container {
+    background-image: linear-gradient(270deg, $dark-primary-gradient-color 0%, $dark-secondary-gradient-color 100%);
+    color: $primary-text-color;
+  }
+
+  #logo {
+    background-image: url(../assets/gifOF_logo_dark.png);
+  }
+
+  .primary-button {
+    background: $dark-primary-button-background-color;
+    border: 1px solid $primary-button-border-color;
+    box-shadow: inset -1px -1px 0 0 $dark-primary-button-box-shadow-primary-color, inset 1px 1px 0 0 $primary-button-box-shadow-secondary-color;
+    color: white;
+
+    &:hover {
+      background: $dark-active-primary-button-background-color;
+    }
+
+    &:active {
+      background: $dark-active-primary-button-background-color;
+    }
+
+    .lupa-icon {
+      background-image: url('../assets/lupa_light.svg');
+
+    }
+  }
+
+  .primary-button-dark {
+    background: #f0a6e2;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #df83d8, inset 1px 1px 0 0 #ffffff;
+    color: white;
+
+    &:hover {
+      background: $dark-active-primary-button-background-color;
+    }
+
+    &:active {
+      background: $dark-active-primary-button-background-color;
+    }
+  }
+
+  .buttons-container {
+      background: $dark-grey-box-background-color;
+      box-shadow: inset -2px -2px 0 0 $dark-grey-box-shadow-primary-color, inset 2px 2px 0 0 $grey-box-shadow-secondary-color;
+  }
+
+  .nav-button {
+      background: $dark-secondary-button-background-color;
+      border: 1px solid $secondary-button-border-color;
+
+      &:active {
+          background: $dark-active-nav-button-background-color;
+          border: 1px solid $dark-active-nav-button-border-color;
+      }
+
+      a {
+        color: $secondary-text-color;
+      }
+  }
+
+  .default-link {
+    background-color: $dark-body-background-color;
+    color: $primary-text-color;
+
+    &:hover {
+      outline: 1px dotted $dark-active-default-link-outline-color;
+    }
+  }
+
+  .search-container {
+    background: $dark-grey-box-background-color;
+    box-shadow: inset -2px -2px 0 0 $dark-grey-box-shadow-primary-color, inset 2px 2px 0 0 $grey-box-shadow-secondary-color;
+  } // ver
+
+  .box-header {
+    background-image: linear-gradient(270deg, $dark-primary-gradient-color 0%, $dark-secondary-gradient-color 100%);
+  }
+
+  .search-bar {
+    color: $dark-grey-box-background-color;
+  }
+
+  .default-search-button {
+    background: $dark-search-button-background-color;
+    border: 1px solid $search-button-border-color;
+    box-shadow: inset -1px -1px 0 0 $search-button-box-shadow-primary-color, inset 1px 1px 0 0 $search-button-box-shadow-secondary-color;
+    color: $dark-search-box-text-color;
+
+    .lupa-icon {
+      background-image: url('../assets/lupa_dark.svg');
+    }
+  }
+
+  .secondary-button {
+    background-color: $dark-secondary-button-background-color;
+
+    a {
+      color: $secondary-text-color;
+    }
+  }
+
+  .white-container {
+    border: $dark-white-container-border-color;
+    box-shadow: inset -2px -2px 0 0 $white-container-box-shadow-primary-color, inset 2px 2px 0 0 $dark-white-container-box-shadow-secondary-color;
+  }
+
+  .suggestions-box {
+    background: $dark-grey-box-background-color;
+    box-shadow: inset -2px -2px 0 0 $dark-grey-box-shadow-primary-color, inset 2px 2px 0 0 $grey-box-shadow-secondary-color;
+  }
+
+  .third-button {
+    background: $dark-third-button-background-color;
+      box-shadow: inset -2px -2px 0 0 $dark-third-button-box-shadow-primary-color, inset 2px 2px 0 0 $third-button-box-shadow-secondary-color;
+    color: $primary-text-color;
+  }
+
+  .tendencies-box {
+    &:hover {
+      background: $dark-grey-box-background-color;
+      box-shadow: inset -2px -2px 0 0 $dark-grey-box-shadow-primary-color, inset 2px 2px 0 0 $grey-box-shadow-secondary-color;
+    }
+  }
+
+  .colored-tick {
+    background: $progress-bar-colored-tick-dark-background-color;
+  }
+
+  .camera-icon {
+    background-image: url("../assets/camera_light.svg");
+  }
+}

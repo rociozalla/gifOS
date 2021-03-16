@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="Rocio Zalla" />
+    <meta name="description" content="gifOS" />
+    <meta name="keywords" content="gifos, , , , , , " />
+    <title>gifOS</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+      integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.8/RecordRTC.js" type="text/javascript" defer></script>
+    <script src="./js/gif-creation.js" defer></script>
+  </head>
+  <body class="light-theme">
+    <header>
+      <div class="bar-container">
+        ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803
+      </div>
+      
+      <div class="container">
+        <a href="#" id="floating-arrow" class="hidden show-on-gif-creation-start gif-creation gif-creation-cancel">
+          <i class="icon arrow-icon"></i>
+        </a>
+        <a id="logo" href="http://localhost:5500/" class="left"></a>
+        <nav class="right gif-creation-hide">
+          <ul>
+            <li><a href="#" id="gif-creation-start-button" class="button button-large primary-button">Crear Guifos</a></li>
+            <li>
+              <a href="#" class="button split-button primary-button" id="theme-selector-button">
+                <span>Elegir tema</span>
+                <span class="vertical-line"></span>
+                <i class="icon dropdown-icon"></i>
+              </a>
+              <div class="hidden buttons-container" id="theme-selector-dropdown">
+                <a href="#" id="light-theme" class="nav-button">Sailor Day</a>
+                <a href="#" id="dark-theme" class="nav-button">Sailor Night</a>
+              </div>
+            </li>
+            <a href="http://localhost:5500/mis_guifos.html" class="default-link button underline">Mis Guifos</a>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="container hidden show-on-gif-creation-start gif-creation" id="gif-creation-instructions-container">
+        <div class="container-wrapper-small">
+          <div class="box-header light-bar-container">
+            <h2 class="box-header-text">Crear Guifos</h2>
+          </div>
+          <div class="advice-body">
+            <div class="left">
+              <i class="window-icon icon"></i> 
+            </div>
+            <div class="left">
+              <div class="instructions-container">
+                <h3 class="bold">Aquí podrás crear tus propios guifos</h3>
+                <p>Crear tu <span class="bold italic">guifo</span> es muy fácil, graba cualquier imagen con tu cámara y obtén guifos personalizados. Los pasos para crear tu guifo son: <br>
+                <span class="bold">1)</span> Dar permisos de acceso a la cámara (sólo por el tiempo de uso) <br>
+                <span class="bold">2)</span> Capturar tu momento guifo<br>
+                <span class="bold">3)</span> Revisar el momento<br>
+                <span class="bold">4)</span> Listo para subir y compartir!<br>
+                ¿Quieres comenzar a crear tu <span class="bold italic">guifo</span> ahora?</p>
+              </div>
+            </div>
+            <div class="advice-footer">
+              <a href="#" class="button button-large primary-button right margined-left" id="gif-creation-start-process-button">Comenzar</a>
+              <a href="#" class="button button-large primary-button-light primary-button-dark right gif-creation-cancel">Cancelar</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container gif-creation hidden" id="gif-creation-recording-container">
+        <div class="box-wrapper">
+          <div class="box-header light-bar-container" id="video-recording-header">
+            <h2 class="box-header-text gif-creation-recording-step-2">Un Chequeo Antes de Empezar</h2>
+            <h2 class="box-header-text hidden gif-creation-recording-step-3">Capturando Tu Guifo</h2>
+            <h2 class="box-header-text hidden gif-creation-recording-step-4">Vista Previa</h2>
+            <h2 class="box-header-text hidden gif-creation-recording-step-5">Subiendo Guifo</h2>
+            <a href="#" class="gif-creation-cancel">
+              <i class="icon cross-icon"></i>
+            </a>
+          </div>
+          <div class="box-body">
+            <div class="media-container gif-creation-recording-step-2 gif-creation-recording-step-3 gif-creation-recording-step-4">
+              <video id="video-player"></video>
+            </div>
+
+            <div class="media-container white-container hidden no-padding gif-creation-recording-step-5">
+              <div class="advice-container">
+                <i class="icon world-icon"></i> 
+                <h3 class="bold">Estamos subiendo tu guifo…</h3>
+  
+                <span class="separator-small"></span>
+  
+                <div class="mobile-hidden progress-bar"></div>
+                <div class="grey-text">
+                  <span>Tiempo restante:</span><span class="line-through">38 años</span> <span>algunos minutos</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="box-footer">
+
+              <div class="gif-creation-recording-step-2">
+                <a href="#" class="button split-button primary-button right" id="gif-creation-start-recording-button">
+                  <i class="icon camera-icon"></i>
+                  <span class="vertical-line"></span>
+                  <span>Capturar</span>
+                </a>
+              </div>
+
+              <div class="hidden gif-creation-recording-step-3">
+                <div class="white-container fit-content left mobile-hidden">
+                  <span class="gif-creation-recording-timer">00:00:00:00</span>
+                </div>
+                <a href="#" class="button split-button red-button right" id="gif-creation-stop-recording-button">
+                  <i class="icon recording-icon"></i>
+                  <span class="vertical-line"></span>
+                  <span>Listo</span>
+                </a>
+              </div>
+
+              <div class="hidden gif-creation-recording-step-4">
+                <div class="white-container fit-content left mobile-hidden">
+                  <span class="gif-creation-recording-timer">00:00:00:00</span>
+                </div>
+                <div class="video-controller left">
+                  <a href="#" class="button primary-button forward-button left" id="gif-creation-play-video-button">
+                    <i class="icon icon-forward"></i>
+                  </a>
+                  <div id="gif-creation-player-progress-bar" class="mobile-hidden progress-bar"></div>
+                </div>
+                <div class="right">
+                  <a href="#" class="button primary-button" id="gif-creation-refresh-recording-button">Repetir Captura</a>
+                  <a href="#" class="button primary-button" id="gif-creation-upload-recording-button">Subir Guifo</a>
+                </div>
+              </div>
+
+              <div class="hidden gif-creation-recording-step-5">
+                <a href="#" class="button button-large primary-button-light primary-button-dark right gif-creation-cancel">Cancelar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container gif-creation hidden" id="gif-creation-completed-container">
+        <div class="container-wrapper-small">
+          <div class="box-header light-bar-container">
+            <h2 class="box-header-text">Guifo Subido Con Éxito</h2>
+            <a href="#" class="gif-creation-cancel">
+              <i class="icon cross-icon"></i>
+            </a>
+          </div>
+          <div class="advice-body">
+            <div class="container-small left"></div>
+            <div class="container-small right margined-children">
+              <span class="separator-small"></span>
+              <h3 class="bold">Guifo creado con éxito</h3>
+              <a href="#" class="button button-large primary-button-light primary-button-dark full-width">Copiar Enlace Guifo</a>
+              <a href="#" class="button button-large primary-button-light primary-button-dark full-width">Descargar Guifo</a>
+            </div>     
+
+            <div class="advice-footer">
+              <a href="#" class="button button-large primary-button right">Listo</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="container">
+        <div class="white-container margin-top">
+          <span>Mis Guifos</span>
+        </div>
+        
+        <div class="grid" id=""></div>
+      </section>
+
+    </main>
+  </body>
+</html>

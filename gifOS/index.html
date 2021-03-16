@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="Rocio Zalla" />
+    <meta name="description" content="gifOS" />
+    <meta name="keywords" content="gifos, , , , , , " />
+    <title>gifOS</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+      integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.8/RecordRTC.js" type="text/javascript" defer></script>
+    <script src="./js/index.js" defer></script>
+    <script src="./js/gif-creation.js" defer></script>
+  </head>
+  <body class="light-theme">
+    <header>
+      <div class="bar-container">
+        ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803
+      </div>
+      
+      <div class="container">
+        <a href="#" id="floating-arrow" class="cancel-gif-creation hidden gif-creation-any">
+          <i class="icon arrow-icon"></i>
+        </a>
+        <a id="logo" href="http://localhost:5500/" class="left"></a>
+        <nav class="right">
+          <ul>
+            <li><a href="#" class="button button-large primary-button">Crear Guifos</a></li>
+            <li>
+              <a href="#" class="button split-button primary-button" id="theme-selector-button">
+                <span>Elegir tema</span>
+                <span class="vertical-line"></span>
+                <i class="icon dropdown-icon"></i>
+              </a>
+              <div class="hidden buttons-container" id="theme-selector-dropdown">
+                <a href="#" id="light-theme" class="nav-button">Sailor Day</a>
+                <a href="#" id="dark-theme" class="nav-button">Sailor Night</a>
+              </div>
+            </li>
+            <a href="http://localhost:5500/mis_guifos.html" class="default-link button underline">Mis Guifos</a>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="container">
+        <div class="search-container margin-top">
+          <div class="box-header">
+            <h1 class="box-header-text">Buscar</h1>
+          </div>
+          <div class="search-bar-container">
+            <form id="search_form" action="javascript:void(0);">
+              <input type="search"
+                  autocomplete="off"
+                  id="search-input"
+                  class="search-bar"
+                  placeholder="Busca gifs, hashtags, temas, busca lo que quieras..."
+                  aria-required="true"
+                  required
+              />
+              <button type="submit" class="default-search-button no-padding" id="search-button"> 
+                <i class="lupa-icon"></i> 
+                <span class="search-button-text">Buscar</span>
+              </button>
+            </form>
+          </div>
+          <div class="hidden buttons-container margined-children" id="search-options-container">
+            <a href="#" class="secondary-button autocomplete-button" data-search="foca" id="first-suggestion-search-button">foca (aleatorio)</a>
+            <a href="#" class="secondary-button autocomplete-button" data-search="perro" id="second-suggestion-search-button">perro (aleatorio)</a>
+            <a href="#" class="secondary-button autocomplete-button" data-search="gato" id="third-suggestion-search-button">gato (aleatorio)</a>
+          </div>
+        </div>
+        <div id="search-suggestions-container"></div>
+      </section>
+      
+      <div class="separator"></div>
+
+      <section class="container visible" id="suggestions-container">
+        <div class="white-container">
+          <span>Hoy te sugerimos:</span>
+        </div>
+
+        <div class="grid" id="suggestions-result-grid"></div>
+      </section>
+
+      <div class="separator"></div>
+      
+      <section class="container visible" id="tendencies-container">
+        <div class="white-container">
+          <span>Tendencias:</span>
+        </div>
+
+        <div class="grid" id="tendencies-result-grid"></div>
+      </section>
+
+      <div class="separator"></div>
+
+      <section class="container hidden" id="search-result-container">
+        <div class="white-container">
+          <span id="search-query-container"></span> (resultados)
+        </div>            
+        <div class="grid" id="search-result-grid"></div>
+      </section>
+    </main>
+  </body>
+</html>

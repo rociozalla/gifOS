@@ -1,0 +1,108 @@
+/// The purpose of this file is to define the styles of the header
+
+header {
+  .bar-container {
+    box-shadow: 0 1px 0 0 $first-bar-box-shadow;
+  }
+
+  .container {
+    position: relative;
+    margin-top: 30px;
+  }
+
+  .container::after {
+    content: ' ';
+    display: block;
+    clear: both;
+  }
+
+  #logo {
+    display: block;
+    width: 90px;
+    height: 48px;
+    margin: 0 auto;
+
+    @include from-tablet {
+      display: inline-block;
+      width: 90px;
+      height: 48px;
+    }
+  }
+
+  #floating-arrow {
+    position: absolute;
+    top: 15px;
+    margin-left: -30px;
+  }
+}
+
+nav ul li {
+  display: block;
+  margin-bottom: 15px;
+  position: relative;
+
+  @include from-tablet {
+    display: inline-block;
+    margin: 7px;
+  }
+}
+
+//Dirty fix
+//TODO: follow best practices :)
+nav {
+  .vertical-line {
+    padding: 0 8px;
+  }
+}
+
+.dropdown-icon {
+  background-image: url('../assets/dropdown.svg');
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  margin: 0 0 0 45px;
+
+  @include from-tablet {
+    margin: 0;  
+  }
+}
+
+#arrow-button {
+  border-left: 1px #000 solid;
+  padding: 5px 20px;
+
+  @include from-tablet {
+    padding: 8px 15px;
+  }
+
+  @include from-desktop {
+    padding: 10px 12px;
+  }
+}
+
+.default-link {
+  list-style-type: none;
+  text-align: center;
+  font-size: 16px;
+  color: $secondary-text-color;
+
+  @include from-tablet {
+    margin-left: 15px;
+    padding: 10px 10px 10px 5px;
+  }
+
+  &:active {
+    color: $active-default-link-color;
+    outline: unset;
+  }
+}
+
+p {
+  @include from-tablet {
+    display: inline-block;
+  }
+}
+
+.underline::first-letter {
+  text-decoration: underline;
+}

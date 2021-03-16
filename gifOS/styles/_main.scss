@@ -1,0 +1,185 @@
+// search section
+
+body {
+
+  #search-suggestions-container {
+    margin-top: 15px;
+    .button {
+      margin-right: 10px;
+    }
+  }
+
+  .search-container {
+    padding: 3px 2px 0 2px;
+    position: relative;
+  }
+
+  .search-bar-container {
+    @include from-tablet {
+      padding: 9px 7px;
+    }
+    @include from-desktop {
+      height: 48px;
+      padding: 10px 13px;
+    }
+
+    .search-bar {
+      width: 100%;
+      height: 48px;
+      padding: 0 0 0 10px;
+      background: $search-input-box-background-color;
+      border: 1px solid $search-input-box-border-color;
+      box-shadow: inset -2px -2px 0 0 $search-input-box-shadow-primary-color,
+        inset 2px 2px 0 0 $search-input-box-shadow-secondary-color;
+      font-size: 16px;
+      line-height: 22px;
+
+      @include from-tablet {
+        width: 84%;
+        padding: 0 0 0 20px;
+      }
+    }
+
+    #search-button {
+      width: 100%;
+      height: 36px;
+      margin-top: 2px;
+      align-items: center;
+      cursor: pointer;
+      float: unset;
+
+      @include from-tablet {
+        width: 88px;
+        margin-top: 7px;
+        float: right;
+      }
+
+      @include from-desktop {
+        width: 120px;
+      }
+
+      .search-button-text {
+        margin-left: 3px;
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  // suggestions section
+
+  .grid {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include from-tablet {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 10px;
+    }
+
+    @include from-desktop {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 12px;
+    }
+
+    div:nth-child(5n) {
+      grid-column: span 2;
+    }
+
+    .box {
+      position: relative;
+      height: 240px;
+      padding: 4px;
+      margin-bottom: 15px; 
+    }
+
+    .box img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .suggestions-box {
+
+    .box-header {
+      position: absolute;
+      left: 3px;
+      right: 3px;
+    }
+
+    .third-button {
+      position: absolute;
+      margin-left: 10px;
+      margin-top: 197px;
+      padding: 1px 2px;
+      text-align: center;
+      font-size: 12px;
+      color: $primary-text-color;
+      border: 1px solid $third-button-border-color;
+
+      @include from-tablet {
+        font-size: 16px;
+        padding: 3px 5px;
+      }
+    }
+
+    .suggestions-img {
+      margin-top: 28px;
+      height: 212px;
+
+      &:hover {
+        outline-offset: -4px;
+        outline: 1px dotted #110038;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  // tendencies section
+
+  .tendencies-box {
+
+    &:hover {
+      outline-offset: -4px;
+      outline: 1px dotted $hover-primary-color;
+    }
+
+    &:hover .box-footer {
+      display: block;
+    }
+
+    .box-footer {
+      display: none;
+      position: absolute;
+      left: 4px;
+      right: 4px;
+      bottom: 4px;
+
+      background-image: linear-gradient(
+        270deg,
+        $light-primary-gradient-color 0%,
+        $light-secondary-gradient-color 100%
+      );
+    }
+  }
+}
+
+.cross-icon {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  right: 5px;
+  top: 5px;
+
+  background-image: url("../assets/close.svg");
+
+  @include from-tablet {
+    width: 15px;
+    height: 15px;
+  }
+}

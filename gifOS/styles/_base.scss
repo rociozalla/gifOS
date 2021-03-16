@@ -1,0 +1,421 @@
+/// @author rzalla
+/// The purpose of this file is to define:
+///  - Base elements, variables that will be used throughout the whole site and mixins.
+
+@import "./_reset.scss";
+
+// Base styles
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  opacity: 100%;
+  font-family: 'Chakra Petch';
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+// Media query variables
+$phone-size: 576px; // Small devices (landscape-phones, 576px and up)
+$tablet-size: 768px; // Medium devices (tablets, 768px and up)
+$desktop-size: 992px; // Large devices (desktops, 992px and up)
+$tv-size: 1200px; // Extra large devices (large desktops, 1200px and up)
+
+// Mixins
+@mixin phone-only {
+    @media (min-width: $phone-size) {
+      @content;
+    }
+  }
+  
+  @mixin from-tablet {
+    @media (min-width: $tablet-size) {
+      @content;
+    }
+  }
+  
+  @mixin from-desktop {
+    @media (min-width: $desktop-size) {
+      @content;
+    }
+  }
+  
+  @mixin from-big-desktop {
+    @media (min-width: $tv-size) {
+      @content;
+    }
+  }
+
+// Style variables
+
+// Background colors
+$light-body-background-color: #fff0f5;
+$dark-body-background-color: #24033f;
+
+// Text colors
+$primary-text-color: #FFFFFF;
+$secondary-text-color: #110038;
+$light-search-box-text-color: #B4B4B4;
+$dark-search-box-text-color: #8F8F8F;
+$active-default-link-color: grey;
+
+// Primary button colors
+$light-primary-button-background-color: #F7C9F3;
+$light-primary-button-box-shadow-primary-color: #997D97;
+$primary-button-box-shadow-secondary-color: #FFFFFF;
+$primary-button-border-color: #110038;
+$dark-primary-button-background-color: #EE3EFE;
+$dark-primary-button-box-shadow-primary-color: #A72CB3;
+
+// Active primary button colors
+$light-active-primary-button-background-color: #E6BBE2;
+$active-primary-button-outline-color: #110038;
+$dark-active-default-link-outline-color: #FFFFFF;
+$dark-active-primary-button-background-color: #CE36DB;
+
+// Secondary and nav button colors
+$light-secondary-button-background-color: #F0F0F0;
+$secondary-button-box-shadow-primary-color: #B4B4B4;
+$secondary-button-box-shadow-secondary-color: #FFFFFF;
+$secondary-button-border-color: #808080;
+$dark-secondary-button-background-color: #CCCCCC;
+
+// Active nav button colors
+$light-active-nav-button-background-color:  #FFF4FD;
+$dark-active-nav-button-background-color:  #2E32FB;
+$light-active-nav-button-border-color: #CCA6C9;
+$dark-active-nav-button-border-color: #33358F 20%; 
+$active-nav-button-box-shadow-primary-color: #E6DCE4;
+$active-nav-button-outline-color: #110038;
+
+// Third button colors
+$light-third-button-background-color: #4180F6;
+$light-third-button-box-shadow-primary-color: #284F99;
+$third-button-box-shadow-secondary-color: #FFFFFF;
+$third-button-border-color: #4C2F99;
+$dark-third-button-background-color: #2E32FB;
+$dark-third-button-box-shadow-primary-color: #2124B3;
+
+// Search button colors
+$light-search-button-background-color: #E6E6E6;
+$search-button-border-color: #808080; 
+$search-button-box-shadow-primary-color: #B4B4B4;
+$search-button-box-shadow-secondary-color: #FFFFFF;
+$dark-search-button-background-color: #B4B4B4;
+
+// Hover colors
+$hover-primary-color: #110038;
+
+// Grey box colors
+$light-grey-box-shadow-primary-color: #B4B4B4;
+$grey-box-shadow-secondary-color: #FFFFFF;
+$light-grey-box-background-color: #E6E6E6;
+$dark-grey-box-background-color: #B4B4B4;
+$dark-grey-box-shadow-primary-color: #8F8F8F;
+
+// Search input box colors
+$search-input-box-background-color: #FFFFFF;
+$search-input-box-border-color: #979797;
+$search-input-box-shadow-primary-color: #E6E6E6;
+$search-input-box-shadow-secondary-color: #000000;
+
+// Bar gradient colors
+$light-primary-gradient-color: #F7C9F3;
+$light-secondary-gradient-color: #4180F6;
+$first-bar-box-shadow: #110038;
+$dark-primary-gradient-color: #EE3EFE;
+$dark-secondary-gradient-color: #2E32FB;
+
+// Small bar colors
+$white-container-background-color: #FFFAFE;
+$light-white-container-border-color: #E6BBE2;
+$white-container-box-shadow-primary-color: #E6DCE4; 
+$light-white-container-box-shadow-secondary-color: #80687D;
+$dark-white-container-border-color: #2E32FB;
+$dark-white-container-box-shadow-secondary-color: #110038;
+
+//Progress-bar colors
+$progress-bar-background-color: #999999;
+$progress-bar-box-shadow-primary-color: #000000;
+$progress-bar-box-shadow-secondary-color: #FFFCFC;
+$progress-bar-colored-tick-light-background-color: #F7C9F3;
+$progress-bar-colored-tick-dark-background-color: #EE3EFE;
+
+///  - Particular styles, elements with classes.
+
+.container-fluid {
+  width: 100%;
+}
+
+.container {
+  padding: 0 20px;
+
+  @include from-tablet() {
+    padding: 0 100px;
+  }
+}
+
+.box-header {
+  height: 24px;
+}
+
+.box-header-text {
+  display: inline-block;
+  color: $primary-text-color;
+  font-size: 14px;
+  padding: 0 0 0 4px;
+
+  @include from-tablet {
+    font-size: 16px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.buttons-container {
+  position: absolute;
+  z-index: 10002;
+  left: 0;
+  right: 0;
+  width: auto;
+  padding: 10px;
+
+  a {
+    display: block;
+  }
+
+  a:first-child {
+    margin-bottom: 5px;
+  }
+}
+
+.button {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  padding: 0;
+
+  @include from-tablet {
+    width: fit-content;
+    display: inline-block;
+    padding: 7px 12px;
+  }
+}
+
+.button-large {
+  padding: 0;
+
+  @include from-tablet {
+    padding: 7px 15px;
+  }
+
+  @include from-desktop {
+    padding: 7px 30px;
+  }
+}
+
+.primary-button, .primary-button-light, .primary-button-dark {  
+  &:hover {
+    outline-offset: -4px;
+    outline: 1px dotted;
+  }
+
+  &:active {
+    outline-offset: -4px;
+    outline: 1px dotted $active-primary-button-outline-color;
+  }
+}
+
+.secondary-button, .nav-button {
+  padding: 5px;
+  border: 1px solid $secondary-button-border-color;
+  box-shadow: inset -1px -1px 0 0 $secondary-button-box-shadow-primary-color, inset 1px 1px 0 0 $secondary-button-box-shadow-secondary-color;
+  color: $secondary-text-color;
+
+  @include from-tablet {
+    padding: 9px;
+  }
+}
+
+.nav-button {
+  &:active::first-letter {
+    text-decoration: underline;
+  }
+}
+
+
+.dark-theme .secondary-button, .light-theme .secondary-button {
+  &:active {
+    background-color: $dark-secondary-button-background-color;
+    outline-offset: -4px;
+    outline: 1px dotted $active-nav-button-outline-color;
+  }
+}
+
+.margined-children * {
+  margin-bottom: 5px;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.button * {
+  vertical-align: middle;
+}
+
+.split-button {
+  position: relative;
+
+  * {
+    vertical-align: middle;
+  }
+}
+
+.split-button span {
+  &:last-child, &:first-child {
+    padding: 0 30px;
+  }
+}
+
+.vertical-line {
+  display: none;
+  margin: 0 3px;
+
+  &::after {
+    content: ' ';
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 1px;
+    background-color: $primary-button-border-color;
+    height: 100%;
+    box-shadow: 1px 0px 0px 0px #FFF;
+
+    @include from-tablet {
+      display: inline-block;
+    }
+  }
+
+  @include from-tablet {
+    display: inline-block;
+  }
+}
+
+.red-button {
+  background: #ff6161;
+  box-shadow: inset -1px -1px 0 0 #993a3a, inset 1px 1px 0 0 #ffffff;
+  border: 1px solid $primary-button-border-color;
+  color: white;
+}
+
+.right {
+  float: none;
+
+  @include from-tablet {
+    float: right;
+  }
+}
+
+.left {
+  float: none;
+
+  @include from-tablet {
+    float: left;
+  }}
+
+.separator {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+
+  @include from-big-desktop {
+    margin-top: 70px;
+  }
+}
+
+.separator-small {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+
+  @include from-big-desktop {
+    margin-top: 30px;
+  }
+}
+
+.fit-content {
+  width: fit-content;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.white-container {
+  padding: 10px;
+  background: $white-container-background-color;
+
+  .white-container-text {
+    color: $secondary-text-color;
+  }
+}
+
+.icon {
+  vertical-align: middle;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: none;
+
+  @include from-tablet {
+    display: inline-block;
+  }
+}
+
+.grey-text {
+  font-size: 12px;
+  color: rgba(17,0,56,0.64);
+  line-height: 14px;
+}
+
+.lupa-icon {
+  width: 15px;
+  height: 15px;
+  background-image: url("../assets/lupa.svg");
+}
+
+.container-small {
+  display: block;
+  width: 100%;
+
+  @include from-tablet {
+    height: 190px;
+    width: 278px;
+    display: inline-block;
+  }
+}
+
+.advice-body {
+  padding: 10px;
+
+  @include from-tablet {
+  padding: 20px;
+  }
+}
+
+.full-width {
+  display: block;
+  width: auto;
+}
+
+.margin-top {
+  margin-top: 25px;
+}

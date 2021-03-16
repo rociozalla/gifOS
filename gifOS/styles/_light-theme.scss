@@ -1,0 +1,147 @@
+.light-theme {
+  background-color: $light-body-background-color;
+
+  .bar-container {
+    background-image: linear-gradient(
+      270deg,
+      $light-primary-gradient-color 0%,
+      $light-secondary-gradient-color 100%
+    );
+    color: $primary-text-color;
+  }
+
+  #logo {
+    background-image: url("../assets/gifOF_logo.png");
+  }
+
+  .primary-button {
+    background-color: $light-primary-button-background-color;
+    color: $secondary-text-color;
+    border: 1px solid $primary-button-border-color;
+    box-shadow: inset -1px -1px 0 0
+        $light-primary-button-box-shadow-primary-color,
+      inset 1px 1px 0 0 $secondary-button-box-shadow-primary-color;
+
+    &:hover {
+      background: $light-active-primary-button-background-color;
+    }
+
+    &:active {
+      background: $light-active-primary-button-background-color;
+    }
+  }
+
+  .primary-button-light {
+    background: #fff4fd;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+    color: $secondary-text-color;
+
+    &:hover {
+      background: $light-active-primary-button-background-color;
+    }
+
+    &:active {
+      background: $light-active-primary-button-background-color;
+    }
+  }
+
+  .buttons-container {
+    background: $light-grey-box-background-color;
+    box-shadow: inset -2px -2px 0 0 $light-grey-box-shadow-primary-color,
+      inset 2px 2px 0 0 $grey-box-shadow-secondary-color;
+  }
+
+  .nav-button {
+
+    &:active {
+      background: $light-active-nav-button-background-color;
+      border: 1px solid $light-active-nav-button-border-color;
+      box-shadow: inset -1px -1px 0 0
+          $active-nav-button-box-shadow-primary-color,
+        inset 1px 1px 0 0 $secondary-button-box-shadow-secondary-color;
+
+      p::first-letter {
+        text-decoration: underline; // ver
+      }
+    }
+  }
+
+  .default-link {
+    background-color: $light-body-background-color;
+
+    &:hover {
+      outline: 1px dotted $active-primary-button-outline-color;
+    }
+  }
+
+  //main
+  .search-container {
+    background: $light-grey-box-background-color;
+    box-shadow: inset -2px -2px 0 0 $light-grey-box-shadow-primary-color,
+      inset 2px 2px 0 0 $grey-box-shadow-secondary-color;
+  }
+
+  .box-header {
+    background-image: linear-gradient(
+      270deg,
+      $light-primary-gradient-color 0%,
+      $light-secondary-gradient-color 100%
+    );
+  }
+
+  .search-bar::placeholder {
+    color: $light-search-box-text-color;
+  }
+
+  .default-search-button {
+    background: $light-search-button-background-color;
+    border: 1px solid $search-button-border-color;
+    box-shadow: inset -1px -1px 0 0 $search-button-box-shadow-primary-color,
+      inset 1px 1px 0 0 $search-button-box-shadow-secondary-color;
+    color: $light-search-box-text-color;
+
+    .lupa-icon {
+      background-image: url("../assets/lupa_inactive.svg");
+    }
+  }
+
+  .secondary-button {
+    background-color: $light-secondary-button-background-color;
+  }
+
+  .white-container {
+    border: $light-white-container-border-color;
+    box-shadow: inset -2px -2px 0 0 $white-container-box-shadow-primary-color,
+      inset 2px 2px 0 0 $light-white-container-box-shadow-secondary-color;
+  }
+
+  .suggestions-box {
+    background: $light-grey-box-background-color;
+    box-shadow: inset -2px -2px 0 0 $light-grey-box-shadow-primary-color,
+      inset 2px 2px 0 0 $grey-box-shadow-secondary-color;
+  }
+
+  .third-button {
+    background: $light-third-button-background-color;
+    box-shadow: inset -2px -2px 0 0 $light-third-button-box-shadow-primary-color,
+      inset 2px 2px 0 0 $third-button-box-shadow-secondary-color;
+    color: $primary-text-color;
+  }
+
+  .tendencies-box {
+    &:hover {
+      background: $light-grey-box-background-color;
+      box-shadow: inset -2px -2px 0 0 $light-grey-box-shadow-primary-color,
+        inset 2px 2px 0 0 $grey-box-shadow-secondary-color;
+    }
+  }
+
+  .colored-tick {
+    background: $progress-bar-colored-tick-light-background-color;
+  }
+
+  .camera-icon {
+    background-image: url("../assets/camera.svg");
+  }
+}
